@@ -1,0 +1,26 @@
+# 参数样例：复制为 terraform.tfvars 后按实际环境填写
+#
+# 华为云访问密钥请通过环境变量提供，切勿写入本文件：
+#   export HW_ACCESS_KEY=<您的 AK>
+#   export HW_SECRET_KEY=<您的 SK>
+#   # 使用 STS 临时凭据时额外提供：
+#   export HW_SECURITY_TOKEN=<您的 Token>
+
+# ---------- 基本信息 ----------
+region       = "cn-north-4"
+project_name = "serverless-saas"
+environment  = "dev"
+
+# ---------- 敏感信息 ----------
+geminidb_password = "<请填写数据库密码>"
+jwt_secret        = "<请填写 JWT 签名密钥>"
+
+# ---------- 可选覆盖项 ----------
+# obs_bucket_name        = "serverless-saas-assets"
+# geminidb_database      = "serverless_saas"
+# geminidb_account_name  = "saas_app"
+# geminidb_node_num      = 3
+# geminidb_storage_size  = 100
+# public_ingress_enabled = true
+# ingress_bandwidth_size = 5
+# log_retention_days     = 30
